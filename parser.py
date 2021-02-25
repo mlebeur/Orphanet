@@ -6,7 +6,7 @@ logging = config.logger
 def load_Orphanet(data_folder):
     infile = os.path.abspath("/opt/biothings/GRCh37/Orphanet/Orphanet.tsv")
     assert os.path.exists(infile)
-    dat = pandas.read_csv(infileInfo,sep="\t",squeeze=True,quoting=csv.QUOTE_NONE).to_dict(orient='records')
+    dat = pandas.read_csv(infile,sep="\t",squeeze=True,quoting=csv.QUOTE_NONE).to_dict(orient='records')
     results = {}
     for rec in dat:
         _id = rec["DisorderGeneAssociationGene_Name"]
